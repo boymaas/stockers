@@ -1,5 +1,3 @@
-require 'stockers/model/player_portfolio'
-
 module Stockers
   module Roles
     module PlayerPortfolio

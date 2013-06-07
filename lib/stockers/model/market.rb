@@ -1,8 +1,8 @@
 module Stockers
   module Model
-    class Player < ActiveRecord::Base
+    class Market < ActiveRecord::Base
       belongs_to :account
-      has_one :portfolio
+      has_many :market_shares
     end
   end
 end

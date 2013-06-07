@@ -7,7 +7,7 @@ class CreateBasicTables < ActiveRecord::Migration
     end
 
     create_table :portfolio_shares do |t|
-      t.references :portolio
+      t.references :portfolio
       t.references :market_share
       t.float      :price, :default => 0.0
       t.integer    :count
@@ -42,7 +42,7 @@ class CreateBasicTables < ActiveRecord::Migration
 
       t.time       :open 
       t.time       :close 
-      t.booelan    :active 
+      t.boolean    :active 
       t.boolean    :disabled 
       t.boolean    :is_currency 
     end

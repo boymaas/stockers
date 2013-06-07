@@ -11,7 +11,15 @@ require 'stockers/setup_database_connection'
 
 # Require MODELS first
 require 'stockers/model/player'
-require 'stockers/model/player_portfolio'
+require 'stockers/model/portfolio'
+require 'stockers/model/account'
+require 'stockers/model/transaction'
+require 'stockers/model/market'
+require 'stockers/model/market_share'
+require 'stockers/model/market_trade'
+require 'stockers/model/player'
+require 'stockers/model/portfolio'
+require 'stockers/model/portfolio_share'
 
 # Require ROLES second
 require 'stockers/roles/player_portfolio/market_buyer'

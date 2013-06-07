@@ -1,6 +1,6 @@
 module Stockers
   module Model
-    class PlayerPortfolio < ActiveRecord::Base
+    class Transaction < ActiveRecord::Base
     end
   end
 end
