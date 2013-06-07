@@ -1,6 +1,6 @@
 require "bundler/gem_tasks"
 
-require 'stockers/env'
+require 'stockers'
 require 'active_record'
 require 'logger'
 
@@ -11,7 +11,5 @@ task :migrate => :environment do
 end
 
 task :environment do
-  config = YAML::load(File.open('db/database.yml'))
-  ActiveRecord::Base.establish_connection(config[Stockers.env])
-  ActiveRecord::Base.logger = Logger.new(File.open('db/database.log', 'a'))
+  Stockers.setup_database_connection
 end

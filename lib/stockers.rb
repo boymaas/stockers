@@ -6,7 +6,11 @@ require 'bundler/setup'
 require 'active_record'
 require 'active_support'
 
+require 'stockers/env'
+require 'stockers/setup_database_connection'
+
 # Require MODELS first
+require 'stockers/model/player'
 require 'stockers/model/player_portfolio'
 
 # Require ROLES second

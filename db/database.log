@@ -75,3 +75,27 @@ D, [2013-06-07T20:28:35.910263 #98204] DEBUG -- :   [1m[35m (0.1ms)[0m  BEGIN
 D, [2013-06-07T20:28:35.918207 #98204] DEBUG -- :   [1m[36m (1.9ms)[0m  [1mDROP TABLE "players"[0m
 D, [2013-06-07T20:28:35.920045 #98204] DEBUG -- :   [1m[35m (1.0ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
 D, [2013-06-07T20:28:35.921315 #98204] DEBUG -- :   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+D, [2013-06-07T20:37:07.191158 #1516] DEBUG -- :   [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+I, [2013-06-07T20:37:07.191349 #1516]  INFO -- : Migrating to CreatePlayer (1)
+D, [2013-06-07T20:37:07.191848 #1516] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2013-06-07T20:37:07.203607 #1516] DEBUG -- :   [1m[36m (6.9ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "account_id" integer, "email" character varying(255), "nick" character varying(255), "fullname" character varying(255), "password" character varying(255), "password_md5" character varying(255)) [0m
+D, [2013-06-07T20:37:07.206134 #1516] DEBUG -- :   [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('1')
+D, [2013-06-07T20:37:07.207243 #1516] DEBUG -- :   [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+D, [2013-06-07T20:47:27.156858 #5566] DEBUG -- :   [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+I, [2013-06-07T20:47:27.157047 #5566]  INFO -- : Migrating to CreatePlayer (1)
+D, [2013-06-07T20:47:37.870407 #5633] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+D, [2013-06-07T20:47:37.871994 #5633] DEBUG -- :   [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+D, [2013-06-07T20:47:37.873818 #5633] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+I, [2013-06-07T20:47:37.873931 #5633]  INFO -- : Migrating to CreatePlayer (1)
+D, [2013-06-07T20:47:37.874337 #5633] DEBUG -- :   [1m[35m (0.2ms)[0m  BEGIN
+D, [2013-06-07T20:47:37.882347 #5633] DEBUG -- :   [1m[36m (3.9ms)[0m  [1mDROP TABLE "players"[0m
+D, [2013-06-07T20:47:37.884179 #5633] DEBUG -- :   [1m[35m (0.9ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '1'
+D, [2013-06-07T20:47:37.885486 #5633] DEBUG -- :   [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+D, [2013-06-07T20:47:42.469974 #5663] DEBUG -- :   [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+D, [2013-06-07T20:47:42.471141 #5663] DEBUG -- :   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+D, [2013-06-07T20:47:42.473018 #5663] DEBUG -- :   [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+I, [2013-06-07T20:47:42.473131 #5663]  INFO -- : Migrating to CreatePlayer (1)
+D, [2013-06-07T20:47:42.473572 #5663] DEBUG -- :   [1m[35m (0.3ms)[0m  BEGIN
+D, [2013-06-07T20:47:42.482629 #5663] DEBUG -- :   [1m[36m (6.9ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "account_id" integer, "email" character varying(255), "nick" character varying(255), "fullname" character varying(255), "password" character varying(255), "password_md5" character varying(255)) [0m
+D, [2013-06-07T20:47:42.485014 #5663] DEBUG -- :   [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('1')
+D, [2013-06-07T20:47:42.485554 #5663] DEBUG -- :   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
