@@ -1,6 +1,5 @@
 # NOTE: require rubygems and bundler setup
-# first to be able to run Bundler.require to load
-# all dependencies
+# so normal requires will work
 require 'rubygems'
 require 'bundler/setup'
 
