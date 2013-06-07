@@ -19,6 +19,6 @@ require 'stockers/roles/player_portfolio/market_buyer'
 # Require CONTEXTS last
 require 'stockers/ctx/proposal/buy_from_market'
 
-module Stockers
-  # Your code goes here...
-end
+# Setup database connection
+Stockers.setup_database_connection
+
