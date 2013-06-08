@@ -22,7 +22,7 @@ require 'stockers/model/portfolio'
 require 'stockers/model/portfolio_share'
 
 # Require ROLES second
-require 'stockers/roles/player_portfolio/market_buyer'
+require 'stockers/roles/player/market_buyer'
 
 # Require CONTEXTS last
 require 'stockers/ctx/proposal/buy_from_market'

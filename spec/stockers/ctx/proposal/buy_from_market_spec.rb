@@ -1,15 +1,26 @@
 require 'stockers'
 
-module Stockers::Ctx::Proposal
+require 'support/blueprints'
 
-  describe BuyFromMarket do
-    context "valid player_portfolio and market_share" do
-      let(:updated_player_portfolio) { BuyFromMarket.call(portfolio, market_share, share_count) }
+module Stockers
+  module Ctx
+    module Proposal
 
-      it "adds portfolio_share to the portfolio" do
-        
+      describe BuyFromMarket do
+        context "valid player_portfolio and market_share" do
+          let(:player) { Model::Player.make! }
+          let(:market) { Model::Market.make!}
+          let(:market_share) { market.market_shares.first }
+          let(:share_count) { 10 }
+
+          let(:updated_player) { BuyFromMarket.call(player, market_share, share_count) }
+
+          let(:updated_portfolio) { updated_player.portfolio  }
+
+          specify  { subject.portfolio_shares.count.should == 1 }
+        end
       end
+
     end
   end
-
 end
