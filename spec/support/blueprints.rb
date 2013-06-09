@@ -27,6 +27,8 @@ module Stockers
     end
 
     Market.blueprint do
+      account
+
       name { "market#{sn}"}
       label { "market_label_#{sn}"}
       description { "description of market"}
