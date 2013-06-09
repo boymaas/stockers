@@ -1,4 +1,5 @@
 require 'machinist'
+require 'dm-machinist'
 
 # Add your blueprints here.
 #

@@ -24,6 +24,7 @@ require 'stockers/model/portfolio_share'
 # Require CONTEXTS last
 require 'stockers/context_accessor'
 require 'stockers/context'
+require 'delegate'
 
 require 'stockers/ctx/account/transfers_money'
 require 'stockers/ctx/player/buy_from_market'

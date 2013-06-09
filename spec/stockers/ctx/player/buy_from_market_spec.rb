@@ -28,10 +28,10 @@ module Stockers
           end
 
 
-          specify { player.account.balance.should == 0.0 }
-          specify { market_share.market.account.balance.should == 10.0 }
+          it { player.account.balance.should == 0.0 }
+          it { market.account.balance.should == 10.0 }
 
-          specify  { updated_portfolio.portfolio_shares.count.should == 1 }
+          xit { updated_portfolio.portfolio_shares.count.should == 1 }
         end
       end
 
