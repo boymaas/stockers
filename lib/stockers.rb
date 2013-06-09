@@ -3,8 +3,7 @@
 require 'rubygems'
 require 'bundler/setup'
 
-require 'active_record'
-require 'active_support'
+require 'data_mapper'
 
 require 'stockers/env'
 require 'stockers/setup_database_connection'

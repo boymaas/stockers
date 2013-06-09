@@ -1,8 +1,15 @@
 module Stockers
   module Model
-    class Portfolio < ActiveRecord::Base
+    class Portfolio 
+
+      include DataMapper::Resource
+
       belongs_to :player
-      has_many :portfolio_shares
+      has n, :portfolio_shares
+
+      property :id,       Serial
+      property :name,       String
+
     end
   end
 end

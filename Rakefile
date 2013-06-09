@@ -1,13 +1,13 @@
 require "bundler/gem_tasks"
 
 require 'stockers'
-require 'active_record'
 require 'logger'
 
 task :default => :migrate
 
 task :migrate => :environment do
-  ActiveRecord::Migrator.migrate('db/migrate', ENV["VERSION"] ? ENV["VERSION"].to_i : nil )
+  DataMapper.auto_upgrade!
+  # DataMapper.auto_migrate! # WARN: this will drop all tables!!
 end
 
 task :environment do

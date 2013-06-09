@@ -1,7 +1,12 @@
 module Stockers
   module Model
-    class Account < ActiveRecord::Base
-      has_many :transactions
+    class Account 
+      include DataMapper::Resource
+
+      property :id      , Serial
+      property :balance , Float
+
+      has n, :transactions
 
       def decrease_balance amount
         self.balance -= amount

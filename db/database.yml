@@ -1,8 +1,0 @@
-test:
-  host: localhost
-  adapter: postgresql
-  encoding: unicode
-  database: stockers_test
-  pool: 5
-  username: boymaas
-  password: 

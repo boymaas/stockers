@@ -19,9 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
 
-  spec.add_dependency "activesupport", "3.2.13"
-  spec.add_dependency "activerecord", "3.2.13"
-  spec.add_dependency "activemodel", "3.2.13"
+  spec.add_dependency "data_mapper", "1.2.0"
+  spec.add_dependency "dm-postgres-adapter", "1.2.0"
 
   spec.add_dependency "pg", "0.15.0"
 
@@ -31,4 +30,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry"
   spec.add_development_dependency "debugger"
   spec.add_development_dependency "machinist", "2.0"
+  spec.add_development_dependency "dm-machinist", "0.0.1"
 end
