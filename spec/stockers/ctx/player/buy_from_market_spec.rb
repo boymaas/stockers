@@ -27,7 +27,7 @@ module Stockers
           it { player.account.balance.should == 0.0 }
           it { market.account.balance.should == 10.0 }
 
-          xit { updated_portfolio.portfolio_shares.count.should == 1 }
+          it { updated_portfolio.portfolio_shares.count.should == 1 }
         end
       end
 
