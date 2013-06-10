@@ -30,7 +30,7 @@ module Stockers
 
           # creates a proposal to sell on the market
           def cancels_proposal
-            context.proposal.destroy
+            context.proposal.destroy!
           end
         end
       end
