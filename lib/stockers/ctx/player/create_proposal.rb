@@ -4,6 +4,8 @@ module Stockers
       class CreateProposal
         include Context
 
+        class NotEnoughSharesInPortfolio < RuntimeError; end
+
         attr_reader :player, :portfolio_share
 
         def initialize(player, portfolio_share)
@@ -23,14 +25,13 @@ module Stockers
         end
 
         class ProposalCreator < DelegateClass(Model::Player)
-          class NotEnoughSharesInPortfolioToCreateProporal < RuntimeError; end
 
           include ContextAccessor
 
           # creates a proposal to sell on the market
           def propose_to_sell count, price
             if context.portfolio_share.count < count
-              raise NotEnoughSharesInPortfolioToCreateProporal
+              raise NotEnoughSharesInPortfolio
             end
 
             context.portfolio_share.proposals.create \

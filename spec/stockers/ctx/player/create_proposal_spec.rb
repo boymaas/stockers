@@ -18,13 +18,21 @@ module Stockers
             BuyFromMarket.call(player, market_share, 10)
           end
 
-          context "valid " do
+          context "enough shares to create proposals " do
             before do
               CreateProposal.call(player, portfolio_share, 10, 20.0)
             end
 
             it { proposal.price.should == 20.0 }
             it { proposal.count.should == 10.0 }
+          end
+          context "enough shares to create proposals " do
+            it "raises an error when not enought shares in portfolio" do
+              lambda do
+              CreateProposal.call(player, portfolio_share, 11, 20.0)
+              end.should raise_error(CreateProposal::NotEnoughSharesInPortfolio)
+            end
+
           end
       end
 
