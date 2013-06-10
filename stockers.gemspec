@@ -31,4 +31,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "debugger"
   spec.add_development_dependency "machinist", "2.0"
   spec.add_development_dependency "dm-machinist", "0.0.1"
+  spec.add_development_dependency "database_cleaner", "0.9.1"
 end

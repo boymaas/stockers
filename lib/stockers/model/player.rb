@@ -8,8 +8,8 @@ module Stockers
       has 1, :portfolio
 
       property :id                      , Serial
-      property :email                   , String
-      property :nick                    , String
+      property :email                   , String, :required => true, :unique => true, :format => :email_address
+      property :nick                    , String, :required => true, :unique => true
       property :fullname                , String
       property :encrypted_password      , String
       property :reset_password_token    , String

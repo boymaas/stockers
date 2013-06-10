@@ -7,7 +7,7 @@ module Stockers
       belongs_to :player
       has n, :portfolio_shares
 
-      property :id,       Serial
+      property :id,         Serial
       property :name,       String
 
     end

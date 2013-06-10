@@ -9,7 +9,7 @@ module Stockers
       property :id          , Serial
       property :name        , String
       property :description , String
-      property :label       , String
+      property :label       , String, :required => true, :unique => true
 
       property :open        , Time
       property :close       , Time

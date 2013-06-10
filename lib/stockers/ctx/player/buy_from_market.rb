@@ -20,6 +20,7 @@ module Stockers
         def call(share_count)
           in_context do
             player.buys_market_share(share_count)
+            player.save
           end
         end
         
@@ -36,8 +37,8 @@ module Stockers
             price          = context.market_share.calculate_price(count)
 
             Account::TransfersMoney.call(context.src_account, context.dst_account, price)
+            Portfolio::AddsMarketShare.call(context.player.portfolio, context.market_share, count)
 
-            # context.player.portfolio.add_market_share(market_share, count)
           end
         end
       end

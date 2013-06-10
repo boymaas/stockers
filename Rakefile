@@ -6,8 +6,8 @@ require 'logger'
 task :default => :migrate
 
 task :migrate => :environment do
-  DataMapper.auto_upgrade!
-  # DataMapper.auto_migrate! # WARN: this will drop all tables!!
+  # DataMapper.auto_upgrade!
+  DataMapper.auto_migrate! # WARN: this will drop all tables!!
 end
 
 task :environment do

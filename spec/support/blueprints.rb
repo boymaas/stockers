@@ -14,6 +14,7 @@ module Stockers
 
     Player.blueprint do
       email { "player#{sn}@example.com" }
+      nick { "nick#{sn}" }
       account 
       portfolio
     end
@@ -25,6 +26,10 @@ module Stockers
 
     Portfolio.blueprint do
       name { "portfolio#{sn}" } 
+    end
+
+    PortfolioShare.blueprint do
+      
     end
 
     Market.blueprint do

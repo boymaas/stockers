@@ -7,8 +7,8 @@ module Stockers
       belongs_to :account
 
       property      :id              , Serial
-      property      :account_balance , Float
-      property      :amount          , Float
+      property      :account_balance , Float, :required => true
+      property      :amount          , Float, :required => true
     end
   end
 end

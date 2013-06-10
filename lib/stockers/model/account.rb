@@ -4,7 +4,7 @@ module Stockers
       include DataMapper::Resource
 
       property :id      , Serial
-      property :balance , Float
+      property :balance , Float, :required => true, :default => 0.0
 
       has n, :transactions
 

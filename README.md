@@ -1,6 +1,6 @@
 # Stockers
 
-TODO: Write a gem description
+Business Logic for stockers
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Go through contexts to update stockers business model, or create a new one
 
 ## Contributing
 
@@ -27,3 +27,10 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Philosophy
+
+DCI, see stockers/ctx directory for contexts. 
+
+Context instantiates domain objects, assigns roles, and SAVES all changes
+to database. This way Contexts can be reused.

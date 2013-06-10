@@ -14,6 +14,8 @@ module Stockers
         def call(amount)
           in_context do
             src_account.transfer_out(amount) 
+            src_account.save
+            dst_account.save
           end
         end
 

@@ -10,7 +10,7 @@ module Stockers
       property :company_name , String
       property :summary      , String
       property :price        , Float  , :default => 0.0
-      property :infolink     , String
+      property :infolink     , String, :format => :url
 
       def calculate_price count
         price * count

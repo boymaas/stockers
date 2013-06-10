@@ -21,11 +21,16 @@ require 'stockers/model/player'
 require 'stockers/model/portfolio'
 require 'stockers/model/portfolio_share'
 
+# NOTE: Needed after loading all models, important
+# for setting fe. allowed_writer_methods
+DataMapper.finalize 
+
 # Require CONTEXTS last
 require 'stockers/context_accessor'
 require 'stockers/context'
 require 'delegate'
 
+require 'stockers/ctx/portfolio/adds_market_share'
 require 'stockers/ctx/account/transfers_money'
 require 'stockers/ctx/player/buy_from_market'
 

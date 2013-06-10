@@ -1,6 +1,4 @@
-require 'stockers'
-
-require 'support/blueprints'
+require 'spec_helper'
 
 module Stockers
   module Ctx
@@ -11,7 +9,7 @@ module Stockers
           let(:src_account) { Model::Account.make! :balance => 10 }
           let(:dst_account) { Model::Account.make! :balance => 0}
 
-          let!(:updated_player) { TransfersMoney.call(src_account, dst_account, 10) }
+          let!(:updated_player) {  TransfersMoney.call(src_account, dst_account, 10)  }
 
           specify  { src_account.balance.should == 0.0 }
           specify  { dst_account.balance.should == 10.0 }
@@ -22,7 +20,6 @@ module Stockers
         context "insufficient funds in src account" do
           let(:src_account) { Model::Account.make! :balance => 9.9 }
           let(:dst_account) { Model::Account.make! :balance => 0}
-
 
           it "raises InsufficientFunds error" do
             lambda do
