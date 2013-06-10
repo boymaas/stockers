@@ -6,6 +6,7 @@ module Stockers
 
       belongs_to :portfolio
       belongs_to :market_share
+      has n, :proposals
 
       property :id    , Serial
       property :price , Float
