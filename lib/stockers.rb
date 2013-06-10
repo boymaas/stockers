@@ -35,6 +35,7 @@ require 'stockers/ctx/portfolio/adds_market_share'
 require 'stockers/ctx/account/transfers_money'
 require 'stockers/ctx/player/buy_from_market'
 require 'stockers/ctx/player/create_proposal'
+require 'stockers/ctx/player/cancel_proposal'
 
 # Setup database connection
 Stockers.setup_database_connection
