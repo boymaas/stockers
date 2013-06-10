@@ -30,7 +30,7 @@ module Stockers
 
           # creates a proposal to sell on the market
           def propose_to_sell count, price
-            if context.portfolio_share.count < count
+            if context.portfolio_share.shares_available_for_proposals < count
               raise NotEnoughSharesInPortfolio
             end
 
