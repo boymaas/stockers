@@ -10,7 +10,6 @@ module Stockers
 
       def decrease_balance amount
         self.balance -= amount
-
       end
 
       def increase_balance amount
